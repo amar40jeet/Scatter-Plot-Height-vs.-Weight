@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+
+# Get user input
+heights = list(map(float, input("Enter the heights (comma-separated, in cm): ").split(',')))
+weights = list(map(float, input("Enter the weights (comma-separated, in kg): ").split(',')))
+
+# Ensure the number of heights matches the number of weights
+if len(heights) != len(weights):
+    print("The number of heights must match the number of weights.")
+else:
+    # Create the scatter plot
+    plt.figure(figsize=(10, 6))
+    plt.scatter(heights, weights, color='red')
+
+    # Add title and labels
+    plt.title("Height vs. Weight")
+    plt.xlabel("Height (cm)")
+    plt.ylabel("Weight (kg)")
+
+    # Display the scatter plot
+    plt.show()
